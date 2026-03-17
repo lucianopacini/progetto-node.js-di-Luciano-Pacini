@@ -1,0 +1,131 @@
+==============================
+  MEDITACTIVE API - GUIDA TEST COMPLETA
+==============================
+
+--- GET (leggere dati) ---
+
+1. Tutti gli utenti
+   URL: http://localhost:5000/api/users
+   Metodo: GET
+   Body: n/a
+
+2. Utente ID 1
+   URL: http://localhost:5000/api/users/1
+   Metodo: GET
+   Body: n/a
+
+3. Tutte le meditazioni
+   URL: http://localhost:5000/api/meditations
+   Metodo: GET
+   Body: n/a
+
+4. Intervalli utente 1
+   URL: http://localhost:5000/api/users/1/intervals
+   Metodo: GET
+   Body: n/a
+
+5. Intervalli filtrati (per date e goal)
+   URL: http://localhost:5000/api/intervals/filter?startDate=2026-03-01&endDate=2026-03-31&goalId=1
+   Metodo: GET
+   Body: n/a
+
+6. Intervallo ID 1
+   URL: http://localhost:5000/api/intervals/1
+   Metodo: GET
+   Body: n/a
+
+---
+
+--- POST (creare dati) ---
+
+1. Nuovo utente
+   URL: http://localhost:5000/api/users
+   Metodo: POST
+   Body (JSON):
+   {
+       "email": "giulia@email.com",
+       "nome": "Giulia",
+       "cognome": "Bianchi"
+   }
+
+2. Nuova meditazione
+   URL: http://localhost:5000/api/meditations
+   Metodo: POST
+   Body (JSON):
+   {
+       "title": "Meditazione pomeridiana",
+       "duration": 12
+   }
+
+3. Nuovo intervallo utente 1
+   URL: http://localhost:5000/api/intervals
+   Metodo: POST
+   Body (JSON):
+   {
+       "startDate": "2026-04-01",
+       "endDate": "2026-04-07",
+       "userId": 1
+   }
+
+4. Associa meditazione ID 2 a intervallo ID 1
+   URL: http://localhost:5000/api/intervals/1/goals
+   Metodo: POST
+   Body (JSON):
+   {
+       "goalId": 2
+   }
+
+5. Associa meditazione ID 3 a intervallo ID 1
+   URL: http://localhost:5000/api/intervals/1/goals
+   Metodo: POST
+   Body (JSON):
+   {
+       "goalId": 3
+   }
+
+---
+
+--- PUT (modificare dati) ---
+
+1. Modifica utente ID 1
+   URL: http://localhost:5000/api/users/1
+   Metodo: PUT
+   Body (JSON):
+   {
+       "email": "luciano2@email.com",
+       "nome": "Luciano",
+       "cognome": "Pacini"
+   }
+
+2. Modifica intervallo ID 1
+   URL: http://localhost:5000/api/intervals/1
+   Metodo: PUT
+   Body (JSON):
+   {
+       "startDate": "2026-03-15",
+       "endDate": "2026-03-21",
+       "userId": 1
+   }
+
+---
+
+--- DELETE (cancellare dati) ---
+
+1. Elimina utente ID 3
+   URL: http://localhost:5000/api/users/3
+   Metodo: DELETE
+   Body: n/a
+
+2. Elimina meditazione ID 5
+   URL: http://localhost:5000/api/meditations/5
+   Metodo: DELETE
+   Body: n/a
+
+3. Elimina intervallo ID 2
+   URL: http://localhost:5000/api/intervals/2
+   Metodo: DELETE
+   Body: n/a
+
+==============================
+  FINE GUIDA TEST COMPLETA
+==============================

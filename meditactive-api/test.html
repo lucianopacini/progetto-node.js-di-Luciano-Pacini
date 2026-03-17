@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Test MeditActive API</title>
+</head>
+
+<body>
+    <h1>MeditActive API Test</h1>
+
+    <button id="btn-get">Mostra meditazioni</button>
+    <ul id="meditations-list"></ul>
+
+    <h2>Aggiungi meditazione</h2>
+    <input type="text" id="title" placeholder="Titolo">
+    <input type="number" id="duration" placeholder="Durata">
+    <button id="btn-post">Aggiungi</button>
+
+    <script>
+        const list = document.getElementById('meditations-list');
+        const btnGet = document.getElementById('btn-get');
+        const btnPost = document.getElementById('btn-post');
+
+        btnGet.addEventListener('click', async () => {
+            const res = await fetch('http://localhost:3000/api/meditations');
+            const data = await res.json();
+            list.innerHTML = '';
+            data.forEach(m => {
+                const li = document.createElement('li');
+                li.textContent = `${m.id} - ${m.title} (${m.duration} min)`;
+                list.appendChild(li);
+            });
+        });
+
+        btnPost.addEventListener('click', async () => {
+            const title = document.getElementById('title').value;
+            const duration = parseInt(document.getElementById('duration').value);
+            const res = await fetch('http://localhost:3000/api/meditations', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ title, duration })
+            });
+            const newMeditation = await res.json();
+            alert(`Meditazione aggiunta: ${newMeditation.title}`);
+            document.getElementById('title').value = '';
+            document.getElementById('duration').value = '';
+            btnGet.click(); // aggiorna la lista
+        });
+    </script>
+</body>
+
+</html>
