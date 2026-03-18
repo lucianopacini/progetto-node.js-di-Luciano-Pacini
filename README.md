@@ -7,18 +7,16 @@ Il progetto è pensato per essere semplice, intuitivo e pronto per il portfolio 
 ---
 
 ## 🛠 Tecnologie utilizzate
-<p align="center">
+<center>
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-</p>
 
-<p align="center">
 ![Axios](https://img.shields.io/badge/Axios-007FFF?style=for-the-badge&logo=Axios&logoColor=white)
 ![cors](https://img.shields.io/badge/cors-FF6F00?style=for-the-badge)
 ![body-parser](https://img.shields.io/badge/body--parser-6DB33F?style=for-the-badge)
-</p>
+</center>
 
 ---
 
