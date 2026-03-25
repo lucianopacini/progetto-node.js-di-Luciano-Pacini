@@ -75,15 +75,12 @@ h2 {
 @media (min-width: 651px) {
   .form-interval select {
     flex: 2 1 300px;
-    /* più largo della base di 180px */
     min-width: 200px;
-    /* evita che diventi troppo stretto */
   }
 
   /* Mantieni le date più strette se vuoi */
   .form-interval input[type="date"] {
     flex: 1 1 120px;
-    /* possono rimanere piccole */
     min-width: 100px;
   }
 }
@@ -96,9 +93,7 @@ h2 {
     flex: 1 1 100%;
     min-width: 0;
     width: 95%;
-    /* quasi tutta la larghezza */
     margin: 0 auto;
-    /* centrato con margini automatici */
   }
 }
 
@@ -133,7 +128,6 @@ button:not(.btn-delete):hover {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  /* distanza tra input e bottoni */
   align-items: center;
   margin-bottom: 20px;
 }
@@ -141,16 +135,12 @@ button:not(.btn-delete):hover {
 @media (max-width: 650px) {
   .filter-form {
     flex-direction: column;
-    /* tutto in colonna */
     align-items: center;
-    /* centrato */
     gap: 8px;
-    /* spazio tra bottoni e input */
   }
 
   .filter-form button {
     width: 100%;
-    /* oppure min-width: 120px se vuoi un po’ di margine laterale */
   }
 }
 
@@ -194,20 +184,17 @@ ul li select:focus {
 ul.meditations-list li {
   display: flex;
   justify-content: space-between;
-  /* spinge bottoni a destra */
   align-items: center;
   gap: 10px;
 }
 
 ul.meditations-list li .user-info {
   flex: 1;
-  /* occupa tutto lo spazio a sinistra */
   text-align: left;
 }
 
 ul.meditations-list li button {
   width: 100px;
-  /* bottoni tutti uguali */
 }
 
 /* BADGE GOAL GENERALE */
@@ -244,7 +231,6 @@ ul.meditations-list li button {
 }
 
 /* viola */
-
 .badge-goal:hover {
   opacity: 0.85;
   transform: translateY(-1px);
@@ -264,9 +250,7 @@ ul.meditations-list li button {
   ul li button {
     display: block;
     margin: 6px auto 0 auto;
-    /* centrati e con un piccolo spazio sopra */
     width: 90%;
-    /* occupano quasi tutta la larghezza ma non attaccati ai bordi */
   }
 }
 
