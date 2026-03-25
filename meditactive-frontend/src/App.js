@@ -218,7 +218,7 @@ function App() {
       <ul className="meditations-list">
         {users.map(u => (
           <li key={u.id}>
-            {u.nome} {u.cognome} ({u.email})
+            <span className="user-info">{u.nome} {u.cognome} ({u.email})</span>
             <button onClick={() => startEditUser(u)}>Modifica</button>
             <button className="btn-delete" onClick={() => deleteUser(u.id)}>Elimina</button>
           </li>

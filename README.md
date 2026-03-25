@@ -4,6 +4,12 @@
 Permette di aggiungere, modificare e cancellare utenti e intervalli, associare obiettivi agli intervalli, e filtrare gli intervalli per date o per obiettivi.  
 Il progetto è pensato per essere semplice, intuitivo e pronto per il portfolio di uno sviluppatore full-stack.
 
+## 📸 Anteprima del progetto
+
+Ecco un’anteprima della dashboard **MeditActive**, con utenti e goal visibili:
+
+![Anteprima MeditActive](preview.png)
+
 ---
 
 ## 🛠 Tecnologie utilizzate
@@ -38,22 +44,50 @@ Il progetto è pensato per essere semplice, intuitivo e pronto per il portfolio 
 
 ## 🚀 Installazione e avvio
 
-# 1. Clona il repository
-git clone https://github.com/tuo-username/meditactive.git
+# 1. Clona il repository (monorepo)
+```bash
+git clone https://github.com/lucianopacini/progetto-node.js-di-Luciano-Pacini.git
+cd progetto-node.js-di-Luciano-Pacini
+```
+
+# 2. Avvia il database (MySQL)
+Il progetto utilizza MySQL in locale.
+
+1. Apri XAMPP
+2. Clicca su Start per:
+- Apache
+- MySQL
+
+⚠️ Senza MySQL attivo, il backend non funzionerà (errore ECONNREFUSED)
+
+# 3. Avvio Backend
+```bash
 cd meditactive-api
-
-# 2. Backend
-npm install
-node app.js
-
-# 3. Frontend (in un altro terminale)
-cd frontend
 npm install
 npm start
+```
 
-Il progetto si aprirà automaticamente su http://localhost:3000
+Il backend sarà disponibile su:
+👉 http://localhost:5000
+
+# 4. Avvio Frontend (React)
+Apri un secondo terminale:
+```bash
+cd meditactive-frontend
+npm install
+npm start
+```
+
+Il frontend sarà disponibile su:
+👉 http://localhost:3000
 
 ---
+
+## ⚙ Struttura del Progetto (monorepo)
+Backend:
+https://github.com/lucianopacini/progetto-node.js-di-Luciano-Pacini/tree/main/meditactive-api
+Frontend:
+https://github.com/lucianopacini/progetto-node.js-di-Luciano-Pacini/tree/main/meditactive-frontend
 
 ## 🔗 API principali
 
@@ -85,8 +119,13 @@ Il progetto si aprirà automaticamente su http://localhost:3000
 ---
 
 ## 💡 Suggerimenti
-- Possibile estendere il progetto con autenticazione, notifiche o grafici sulle meditazioni  
-- Ottimo come portfolio full-stack pronto da mostrare  
+- Assicurati che il backend sia avviato prima del frontend
+- Il frontend comunica con il backend su http://localhost:5000/api
+- Se modifichi le porte, aggiorna anche le chiamate API nel frontend
+
+## 😎 Miglioramenti futuri
+- Possibile estendere il progetto con autenticazione, notifiche e grafici sulle meditazioni.
+- Deploy previsto (in fase di sviluppo).
 
 ---
 
