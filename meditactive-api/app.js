@@ -11,7 +11,7 @@ const PORT = 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-require('dotenv').config(); // solo se vuoi testare in locale
+require('dotenv').config(); // per testare in locale
 
 // --- CONNESSIONE DATABASE ---
 const connection = mysql.createConnection({
